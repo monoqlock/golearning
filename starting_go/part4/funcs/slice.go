@@ -1,10 +1,10 @@
-package main
+package funcs
 
 import (
 	"fmt"
 )
 
-func slice() {
+func Slice() {
 	s := make([]int, 10)
 	fmt.Println(s)
 	a := [10]int{}
@@ -50,7 +50,7 @@ func slice() {
 	fmt.Println(s8)
 }
 
-func slice2() {
+func Slice2() {
 	s1 := []int{1,2,3,4,5,6,7,8}
 	s2 := s1[2:4:6]
 	fmt.Printf("s2=%v, len=%d, cap=%d\n", s2, len(s2), cap(s2))
@@ -68,7 +68,7 @@ func pow(a []int) {
 	}
 }
 
-func execPow() {
+func ExecPow() {
 	s := []int{1, 2, 3}
 	pow(s)
 	fmt.Println(s)
