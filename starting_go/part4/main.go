@@ -16,4 +16,8 @@ func main() {
 	fmt.Println("-------- map")
 	funcs.Maps()
 
+	fmt.Println("---------channels")
+	funcs.Channels()
+	funcs.Select()
+	funcs.SelectMix()
 }
