@@ -11,4 +11,9 @@ func main()  {
 	funcs.ExecPointer()
 	funcs.ExecInc()
 	funcs.ExecPow()
+
+	fmt.Println("------struct")
+	funcs.ExecTypes()
+	funcs.ExecSum()
+	funcs.ExecStructs()
 }
