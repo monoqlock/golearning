@@ -16,4 +16,7 @@ func main() {
 	funcs.ExecSum()
 	funcs.ExecStructs()
 	funcs.ExecTags()
+
+	fmt.Println("-------interface")
+	funcs.ExecInterface()
 }
