@@ -1,12 +1,11 @@
 package main
 
-
 import (
-	"fmt"
 	"./funcs"
-	)
+	"fmt"
+)
 
-func main()  {
+func main() {
 	fmt.Println("----pointer")
 	funcs.ExecPointer()
 	funcs.ExecInc()
@@ -16,4 +15,5 @@ func main()  {
 	funcs.ExecTypes()
 	funcs.ExecSum()
 	funcs.ExecStructs()
+	funcs.ExecTags()
 }
