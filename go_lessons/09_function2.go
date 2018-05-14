@@ -17,7 +17,7 @@ func main() {
 	}
 	fmt.Println(f(10, 20))
 
-	func (msg string) {
+	func(msg string) {
 		fmt.Println(msg)
-	} ("morikawa")
+	}("morikawa")
 }

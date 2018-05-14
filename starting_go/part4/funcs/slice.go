@@ -19,7 +19,7 @@ func Slice() {
 	fmt.Println(len(s2))
 	fmt.Println(cap(s2))
 
-	s3 := []int{1,3,5,7,9}
+	s3 := []int{1, 3, 5, 7, 9}
 	s4 := s3[2:4]
 	fmt.Println(s4)
 
@@ -38,20 +38,20 @@ func Slice() {
 	fmt.Printf("A) s7=%v, len=%d, cap=%d\n", s7, len(s7), cap(s7))
 	s7 = append(s7, 1)
 	fmt.Printf("A) s7=%v, len=%d, cap=%d\n", s7, len(s7), cap(s7))
-	s7 = append(s7, []int{2,3,4}...)
+	s7 = append(s7, []int{2, 3, 4}...)
 	fmt.Printf("B) s7=%v, len=%d, cap=%d\n", s7, len(s7), cap(s7))
 	s7 = append(s7, 5)
 	fmt.Printf("C) s7=%v, len=%d, cap=%d\n", s7, len(s7), cap(s7))
 
 	// copy
-	s8 := []int{1,2,3,4,5,6}
-	s9 := []int{4,5,6}
+	s8 := []int{1, 2, 3, 4, 5, 6}
+	s9 := []int{4, 5, 6}
 	copy(s8, s9)
 	fmt.Println(s8)
 }
 
 func Slice2() {
-	s1 := []int{1,2,3,4,5,6,7,8}
+	s1 := []int{1, 2, 3, 4, 5, 6, 7, 8}
 	s2 := s1[2:4:6]
 	fmt.Printf("s2=%v, len=%d, cap=%d\n", s2, len(s2), cap(s2))
 

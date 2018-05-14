@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 type user struct {
-	name string
+	name  string
 	score int
 }
 
@@ -16,7 +16,7 @@ func (u *user) hit() {
 }
 
 func main() {
-	u := user{"morikawa",  200}
+	u := user{"morikawa", 200}
 	u.show()
 
 	u.hit()

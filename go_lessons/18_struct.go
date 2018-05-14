@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 type user struct {
-	name string
+	name  string
 	score int
 }
 

@@ -1,14 +1,12 @@
 package main
 
-
 import (
-	"sync"
 	"fmt"
+	"sync"
 	"time"
 )
 
-var st struct{ a, b, c int}
-
+var st struct{ a, b, c int }
 
 var mutex *sync.Mutex
 
@@ -30,7 +28,7 @@ func UpdateAndPrint(o, i int) {
 	mutex.Unlock()
 }
 
-func main()  {
+func main() {
 
 	fmt.Println("---start")
 
@@ -40,7 +38,7 @@ func main()  {
 		fmt.Println("OUTER: ", i)
 
 		go func() {
-			for j:=0; j < 10; j++ {
+			for j := 0; j < 10; j++ {
 				UpdateAndPrint(i, j)
 			}
 
@@ -72,7 +70,6 @@ func main()  {
 		}
 		wg.Done()
 	}()
-
 
 	wg.Wait()
 

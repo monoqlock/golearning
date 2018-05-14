@@ -5,7 +5,7 @@ import (
 )
 
 type MyError struct {
-	Message string
+	Message   string
 	ErrorCode int
 }
 
@@ -14,7 +14,7 @@ func (e *MyError) Error() string {
 }
 
 func RaiseError() error {
-	return &MyError{"エラーが発生しました", 1234 }
+	return &MyError{"エラーが発生しました", 1234}
 }
 
 type Stringify interface {
@@ -23,7 +23,7 @@ type Stringify interface {
 
 type Person struct {
 	Name string
-	Age uint
+	Age  uint
 }
 
 func (p *Person) ToString() string {
@@ -32,19 +32,19 @@ func (p *Person) ToString() string {
 
 type Car struct {
 	Number string
-	Model string
+	Model  string
 }
 
 func (c *Car) ToString() string {
 	return fmt.Sprintf("[%s] %s", c.Number, c.Model)
 }
 
-func Println(s Stringify)() {
+func Println(s Stringify) {
 	fmt.Println(s.ToString())
 }
 
 type T struct {
-	Id int
+	Id   int
 	Name string
 }
 
@@ -70,13 +70,11 @@ type I3 interface {
 	Method03() int
 }
 
-
-func showId(t interface { GetId() int }) {
+func showId(t interface{ GetId() int }) {
 	fmt.Println("ID=", t.GetId())
 }
 
-
-func ExecInterface()  {
+func ExecInterface() {
 	err := RaiseError()
 	fmt.Println(err.Error())
 

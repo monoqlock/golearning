@@ -5,8 +5,12 @@ import "fmt"
 func main() {
 
 	for i := 0; i < 5; i++ {
-		if i == 3 { continue }
-		if i > 4 { break }
+		if i == 3 {
+			continue
+		}
+		if i > 4 {
+			break
+		}
 		fmt.Println(i)
 	}
 
@@ -20,7 +24,9 @@ func main() {
 	for {
 		fmt.Println(k)
 		k++
-		if k > 5 { break }
+		if k > 5 {
+			break
+		}
 	}
 
 }

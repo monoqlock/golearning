@@ -24,11 +24,11 @@ func ranges() {
 func sw() {
 	num := 5
 	switch num {
-		case 1:
-		 fmt.Println("One")
-		case 5:
+	case 1:
+		fmt.Println("One")
+	case 5:
 		fmt.Println("Five")
-		default:
+	default:
 		fmt.Println("Default")
 	}
 }
@@ -36,14 +36,14 @@ func sw() {
 func assertion() {
 	var as interface{} = "assertion"
 	switch v := as.(type) {
-		case int, uint:
-			fmt.Printf("int: value=%d\n", v)
-		case string:
-			fmt.Printf("string: value=%s\n", v)
-		case bool:
-			fmt.Printf("bool: value=%v\n", v)
-		default:
-			fmt.Println("No type matche")
+	case int, uint:
+		fmt.Printf("int: value=%d\n", v)
+	case string:
+		fmt.Printf("string: value=%s\n", v)
+	case bool:
+		fmt.Printf("bool: value=%v\n", v)
+	default:
+		fmt.Println("No type matche")
 	}
 }
 
@@ -51,12 +51,12 @@ func label() {
 	fmt.Println("A")
 	goto L
 	fmt.Println("B")
-	L:
+L:
 	fmt.Println("C")
 }
 
 func labelLoop() {
-	LABEL:
+LABEL:
 	for {
 		for {
 			fmt.Println("start in label")
@@ -73,12 +73,11 @@ func runDefer() {
 }
 
 func subLoop() {
-	for j := 0; j < 5;{
+	for j := 0; j < 5; {
 		fmt.Printf("subLoop: %d\n", j)
 		j++
 	}
 }
-
 
 func printRuntime() {
 	go fmt.Println("goroutine")

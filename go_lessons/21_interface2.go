@@ -24,8 +24,8 @@ type greeter interface {
 	greet()
 }
 
-type japanese struct {}
-type american struct {}
+type japanese struct{}
+type american struct{}
 
 func (j japanese) greet() {
 	fmt.Println("こんにちは")

@@ -3,7 +3,7 @@ package funcs
 import (
 	"fmt"
 	"time"
-	)
+)
 
 func Channels() {
 
@@ -22,14 +22,14 @@ func Channels() {
 	i := <-ch3
 	fmt.Println(i)
 
-	ch4 := make(chan int, 20 )
+	ch4 := make(chan int, 20)
 	go receiver("1st goroutine", ch4)
 	go receiver("2nd goroutine", ch4)
 	go receiver("3rd goroutine", ch4)
 
 	i2 := 0
 	for i2 < 20 {
-		fmt.Printf("Send %d\n",i2)
+		fmt.Printf("Send %d\n", i2)
 		ch4 <- i2
 		i2++
 	}
@@ -59,9 +59,9 @@ func Select() {
 	ch2 <- 2
 
 	select {
-	case <- ch1:
+	case <-ch1:
 		fmt.Println("receive from ch1")
-	case <- ch2:
+	case <-ch2:
 		fmt.Println("receive from ch2")
 	case ch3 <- 3:
 		fmt.Println("ch3 received")
@@ -71,7 +71,7 @@ func Select() {
 	}
 }
 
-func SelectMix()  {
+func SelectMix() {
 
 	ch1 := make(chan int)
 	ch2 := make(chan int)
@@ -79,31 +79,31 @@ func SelectMix()  {
 
 	go func() {
 		for {
-			i := <- ch1
+			i := <-ch1
 			ch2 <- i * 2
 		}
 	}()
 
 	go func() {
 		for {
-			i := <- ch2
+			i := <-ch2
 			ch3 <- i - 1
 		}
 	}()
 
 	n := 1
-	LOOP:
-		for {
-			select {
-			/* 整数を増分させつつch1に送信 */
-			case ch1 <- n:
-				n++
-			case i := <- ch3:
-				fmt.Println("Received ", i)
-			default:
-				if n > 20 {
-					break LOOP
-				}
+LOOP:
+	for {
+		select {
+		/* 整数を増分させつつch1に送信 */
+		case ch1 <- n:
+			n++
+		case i := <-ch3:
+			fmt.Println("Received ", i)
+		default:
+			if n > 20 {
+				break LOOP
 			}
 		}
+	}
 }
