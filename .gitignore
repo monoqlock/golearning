@@ -116,12 +116,4 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
-.idea/compiler.xml
-.idea/dbnavigator.xml
-.idea/encodings.xml
-.idea/misc.xml
-.idea/modules.xml
-.idea/sbt.xml
-.idea/vcs.xml
-.idea/codeStyles/Project.xml
-.idea/inspectionProfiles/Project_Default.xml
+.idea/*.xml
